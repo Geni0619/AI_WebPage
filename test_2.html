@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--font donwload-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS2.css">
+    <title>AI-1</title>
+</head>
+<body onload="onLoad()">
+    <div class="chat-container">
+        <div class="chat-header">
+            <img src="https://postfiles.pstatic.net/MjAyNDA3MjNfNjEg/MDAxNzIxNzA2NDA2MjAx.uQtR3soOgT8LvL0W0wqyc0onbeTGclOgCMwLQLGPnI0g.Db-0YXzVDW-urn4M9CecTzWdU_Ivez1wX9SjFfZLw9kg.JPEG/y.jpg?type=w466" alt="logo">
+            SMART Chat
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Messages will appear here -->
+        </div>
+        <div class="chat-input">
+            <!-- <textarea class="text-area" type="text" id="user-input" placeholder="Type a message..." onkeypress="handleKeyPress(event)" onchange="inputChange(event)"></textarea>-->
+            <textarea class="text-area" id="user-input" placeholder="Type a message..." 
+            onkeydown="handleKeyPress(event)" onkeyup="handleKeyPress(event)" 
+            onpaste="onPasteProcess(event)"></textarea>
+            <button onclick="sendMessage()">
+                <input type="image" src="https://static-00.iconduck.com/assets.00/send-icon-2048x1863-u8j8xnb6.png" alt ="Send">
+            </button>
+        </div>
+    </div>
+    
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js" integrity="sha512-pmjEJQ7CveksANaAKdCJZMig7eAcCFFzE1b5XnlnxdB/vU3AOStJ5SF7w4tFuqskuU31ETnAaWTYRQOYg2WHKw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="JS _2.js"></script>
+</body>
+</html> 
